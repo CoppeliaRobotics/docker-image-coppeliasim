@@ -3,8 +3,6 @@ CoppeliaSim Docker image
 
 ### Building:
 
-Download the CoppeliaSim package for Ubuntu 18.04 and place it into the `download` directory.
-
 Use `docker build` as usual, or use the provided script:
 
 ```bash
