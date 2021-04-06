@@ -1,4 +1,4 @@
-COPPELIASIM_RELEASE=CoppeliaSim_Edu_V4_1_0_Ubuntu18_04.tar.xz
+COPPELIASIM_RELEASE=CoppeliaSim_Edu_V4_2_0_Ubuntu18_04.tar.xz
 if [ ! -f download/$COPPELIASIM_RELEASE ]; then
     if [ "$1" = "-d" ]; then
         if ! command -v curl > /dev/null 2>&1; then

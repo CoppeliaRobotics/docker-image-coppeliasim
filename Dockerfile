@@ -13,11 +13,11 @@ RUN apt-get update -q && \
 
 RUN mkdir -p /shared /opt
 
-COPY ./download/CoppeliaSim_Edu_V4_1_0_Ubuntu18_04.tar.xz /opt/
-RUN tar -xf /opt/CoppeliaSim_Edu_V4_1_0_Ubuntu18_04.tar.xz -C /opt && \
-    rm /opt/CoppeliaSim_Edu_V4_1_0_Ubuntu18_04.tar.xz
+COPY ./download/CoppeliaSim_Edu_V4_2_0_Ubuntu18_04.tar.xz /opt/
+RUN tar -xf /opt/CoppeliaSim_Edu_V4_2_0_Ubuntu18_04.tar.xz -C /opt && \
+    rm /opt/CoppeliaSim_Edu_V4_2_0_Ubuntu18_04.tar.xz
 
-ENV COPPELIASIM_ROOT_DIR=/opt/CoppeliaSim_Edu_V4_1_0_Ubuntu18_04
+ENV COPPELIASIM_ROOT_DIR=/opt/CoppeliaSim_Edu_V4_2_0_Ubuntu18_04
 ENV LD_LIBRARY_PATH=$COPPELIASIM_ROOT_DIR:$LD_LIBRARY_PATH
 ENV PATH=$COPPELIASIM_ROOT_DIR:$PATH
 
