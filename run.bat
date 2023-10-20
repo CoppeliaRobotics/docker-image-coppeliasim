@@ -1,1 +1,1 @@
-docker run -v %CD%\shared:/shared -p 19997:19997 -it coppeliasim-ubuntu18 %*
+docker run -v %CD%\shared:/shared -p 23000-23500:23000-23500 -it coppeliasim-ubuntu22 %*
