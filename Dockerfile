@@ -17,11 +17,11 @@ RUN mkdir -p /shared /opt
 
 RUN pip3 install pyzmq cbor
 
-COPY ./download/CoppeliaSim_Edu_V4_6_0_rev16_Ubuntu22_04.tar.xz /opt/
-RUN tar -xf /opt/CoppeliaSim_Edu_V4_6_0_rev16_Ubuntu22_04.tar.xz -C /opt && \
-    rm /opt/CoppeliaSim_Edu_V4_6_0_rev16_Ubuntu22_04.tar.xz
+COPY ./download/CoppeliaSim_Edu_V4_6_0_rev18_Ubuntu22_04.tar.xz /opt/
+RUN tar -xf /opt/CoppeliaSim_Edu_V4_6_0_rev18_Ubuntu22_04.tar.xz -C /opt && \
+    rm /opt/CoppeliaSim_Edu_V4_6_0_rev18_Ubuntu22_04.tar.xz
 
-ENV COPPELIASIM_ROOT_DIR=/opt/CoppeliaSim_Edu_V4_6_0_rev16_Ubuntu22_04
+ENV COPPELIASIM_ROOT_DIR=/opt/CoppeliaSim_Edu_V4_6_0_rev18_Ubuntu22_04
 ENV LD_LIBRARY_PATH=$COPPELIASIM_ROOT_DIR:$LD_LIBRARY_PATH
 ENV PATH=$COPPELIASIM_ROOT_DIR:$PATH
 
