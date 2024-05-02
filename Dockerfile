@@ -15,7 +15,7 @@ RUN apt-get update -q && \
 
 RUN mkdir -p /shared /opt
 
-RUN pip3 install pyzmq cbor
+RUN pip3 install pyzmq cbor2
 
 COPY ./download/CoppeliaSim_Edu_V4_6_0_rev18_Ubuntu22_04.tar.xz /opt/
 RUN tar -xf /opt/CoppeliaSim_Edu_V4_6_0_rev18_Ubuntu22_04.tar.xz -C /opt && \
@@ -26,6 +26,8 @@ ENV LD_LIBRARY_PATH=$COPPELIASIM_ROOT_DIR:$LD_LIBRARY_PATH
 ENV PATH=$COPPELIASIM_ROOT_DIR:$PATH
 
 RUN echo '#!/bin/bash\ncd $COPPELIASIM_ROOT_DIR\n/usr/bin/xvfb-run --server-args "-ac -screen 0, 1024x1024x24" coppeliaSim "$@"' > /entrypoint && chmod a+x /entrypoint
+# Run CoppeliaSim with the -h option:
+CMD ["./coppeliaSim.sh", "-h"]
 
 # Use following instead to open an application window via an X server:
 # RUN echo '#!/bin/bash\ncd $COPPELIASIM_ROOT_DIR\n./coppeliaSim "$@"' > /entrypoint && chmod a+x /entrypoint
