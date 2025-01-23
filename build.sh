@@ -1,4 +1,4 @@
-COPPELIASIM_RELEASE="V4_6_0_rev18"
+COPPELIASIM_RELEASE="V4_9_0_rev0"
 COPPELIASIM_FILE="CoppeliaSim_Edu_${COPPELIASIM_RELEASE}_Ubuntu22_04.tar.xz"
 if [ ! -f "download/${COPPELIASIM_FILE}" ]; then
     if [ "$1" = "-d" ]; then
