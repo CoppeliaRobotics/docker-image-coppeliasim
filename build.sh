@@ -1,5 +1,5 @@
-COPPELIASIM_RELEASE="V4_9_0_rev0"
-COPPELIASIM_FILE="CoppeliaSim_Edu_${COPPELIASIM_RELEASE}_Ubuntu22_04.tar.xz"
+COPPELIASIM_RELEASE="V4_9_0_rev2"
+COPPELIASIM_FILE="CoppeliaSim_Edu_${COPPELIASIM_RELEASE}_Ubuntu24_04.tar.xz"
 if [ ! -f "download/${COPPELIASIM_FILE}" ]; then
     if [ "$1" = "-d" ]; then
         if ! command -v curl > /dev/null 2>&1; then
@@ -20,4 +20,4 @@ if [ ! -f "download/${COPPELIASIM_FILE}" ]; then
         exit 1
     fi
 fi
-docker build --rm -f Dockerfile -t coppeliasim-ubuntu22:latest .
+docker build --rm -f Dockerfile -t coppeliasim-ubuntu24:latest .
